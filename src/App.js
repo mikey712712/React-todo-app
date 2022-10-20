@@ -11,7 +11,7 @@ export default function App() {
 	}
 	const [fields, setFields] = useState(defaultFields)
 	const [todos, setTodos] = useState([])
-	const [orderLabel, setLabel] = useState("Show Oldest")
+	const [orderLabel, setLabel] = useState("Sort by Oldest")
 	const [listMode, setListMode] = useState("all")
 
 	const handleChange = (event) => {
@@ -34,11 +34,11 @@ export default function App() {
 	}
 
 	const sortTodos = () => {
-		if (orderLabel === "Show Oldest") {
-			setLabel("Show Recent")
+		if (orderLabel === "Sort by Oldest") {
+			setLabel("Sort by Recent")
 			setTodos([...todos].reverse())
 		} else {
-			setLabel("Show Oldest")
+			setLabel("Sort by Oldest")
 			setTodos([...todos].reverse())
 		}
 	}
