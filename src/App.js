@@ -56,24 +56,24 @@ export default function App() {
 		.map((todo) => <Todo todos={todos} setTodos={setTodos} title={todo.title} details={todo.details} id={todo.id} status={todo.status} />)
 
 	return (
-		<div class="container">
+		<div className="container">
 			<form onSubmit={handleSubmit}>
-				<div class="form-floating mb-3">
-					<input name="title" type="text" required class="form-control" id="title" onChange={handleChange} value={fields.title} />
-					<label class="form-label" for="title">
+				<div className="form-floating mb-3">
+					<input name="title" type="text" required className="form-control" id="title" onChange={handleChange} value={fields.title} />
+					<label className="form-label" for="title">
 						watdo?
 					</label>
 				</div>
-				<div class="mb-3">
-					<label class="form-label" for="details">
+				<div className="mb-3">
+					<label className="form-label" for="details">
 						Deets
 					</label>
-					<textarea name="details" class="form-control" id="details" rows="3" onChange={handleChange} value={fields.details}></textarea>
+					<textarea name="details" className="form-control" id="details" rows="3" onChange={handleChange} value={fields.details}></textarea>
 				</div>
-				<input class="btn btn-light" type="submit" value="Add Todo" />
+				<input className="btn btn-light" type="submit" value="Add Todo" />
 			</form>
 
-			<div class="todo-list">
+			<div className="todo-list">
 				<TodoControls sortTodos={sortTodos} orderLabel={orderLabel} listMode={listMode} setListMode={setListMode} />
 				{listMode === "all" ? todosList : listMode === "pending" ? pendingTodosList : listMode === "complete" ? completedTodosList : null}
 			</div>

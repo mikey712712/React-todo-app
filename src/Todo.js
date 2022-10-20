@@ -10,16 +10,16 @@ export default function Todo({ title, details, id, setTodos, status, todos }) {
 	}
 
 	return (
-		<div class="todo-item">
+		<div className="todo-item">
 			<h5>{title}</h5>
 			<p>{details}</p>
 			{status === "pending" ? (
-				<div class="status btn btn-light">Pending</div>
+				<div className="status btn btn-light">Pending</div>
 			) : status === "complete" ? (
-				<div class="status btn btn-success">✓ Completed</div>
+				<div className="status btn btn-success">✓ Completed</div>
 			) : null}
 			{status === "pending" ? (
-				<button type="button" class="btn btn-dark" onClick={handleTodoDone}>
+				<button type="button" className="btn btn-dark" onClick={handleTodoDone}>
 					Mark as Complete
 				</button>
 			) : null}

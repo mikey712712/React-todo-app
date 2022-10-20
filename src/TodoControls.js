@@ -14,17 +14,17 @@ const TodoControls = ({ sortTodos, orderLabel, setListMode }) => {
 	}
 
 	return (
-		<div class="todo-controls">
-			<button class="btn btn-light" onClick={sortTodos}>
+		<div className="todo-controls">
+			<button className="btn btn-light" onClick={sortTodos}>
 				{orderLabel}
 			</button>
-			<button class="btn btn-light" onClick={handleClickPending}>
+			<button className="btn btn-light" onClick={handleClickPending}>
 				Show Pending
 			</button>
-			<button class="btn btn-light" onClick={handleClickComplete}>
+			<button className="btn btn-light" onClick={handleClickComplete}>
 				Show Completed
 			</button>
-			<button class="btn btn-light" onClick={handleClickAll}>
+			<button className="btn btn-light" onClick={handleClickAll}>
 				Show All
 			</button>
 		</div>
