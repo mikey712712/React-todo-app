@@ -16,17 +16,21 @@ export default function TodoList({ todos, setTodos }) {
 		}
 	}
 
-	const todosList = todos.map((todo) => (
-		<Todo todos={todos} setTodos={setTodos} title={todo.title} details={todo.details} id={todo.id} status={todo.status} />
+	const todosList = todos.map((todo, index) => (
+		<Todo key={index} todos={todos} setTodos={setTodos} title={todo.title} details={todo.details} id={todo.id} status={todo.status} />
 	))
 
 	const pendingTodosList = todos
 		.filter((todo) => todo.status === "pending")
-		.map((todo) => <Todo todos={todos} setTodos={setTodos} title={todo.title} details={todo.details} id={todo.id} status={todo.status} />)
+		.map((todo, index) => (
+			<Todo key={index} todos={todos} setTodos={setTodos} title={todo.title} details={todo.details} id={todo.id} status={todo.status} />
+		))
 
 	const completedTodosList = todos
 		.filter((todo) => todo.status === "complete")
-		.map((todo) => <Todo todos={todos} setTodos={setTodos} title={todo.title} details={todo.details} id={todo.id} status={todo.status} />)
+		.map((todo, index) => (
+			<Todo key={index} todos={todos} setTodos={setTodos} title={todo.title} details={todo.details} id={todo.id} status={todo.status} />
+		))
 
 	return (
 		<div className="todo-list">

@@ -31,12 +31,12 @@ export default function Form({ todos, setTodos }) {
 		<form onSubmit={handleSubmit}>
 			<div className="form-floating mb-3">
 				<input name="title" type="text" required className="form-control" id="title" onChange={handleChange} value={fields.title} />
-				<label className="form-label" for="title">
+				<label className="form-label" htmlFor="title">
 					watdo?
 				</label>
 			</div>
 			<div className="mb-3">
-				<label className="form-label" for="details">
+				<label className="form-label" htmlFor="details">
 					Deets
 				</label>
 				<textarea name="details" className="form-control" id="details" rows="3" onChange={handleChange} value={fields.details}></textarea>
