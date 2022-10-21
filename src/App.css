@@ -28,7 +28,7 @@ form {
 	background-color: #198754;
 }
 
-.btn-light.status:hover {
+.btn-secondary.status:hover {
 	cursor: default !important;
 	background-color: #f8f9fa;
 	border: 1px solid #f8f9fa;

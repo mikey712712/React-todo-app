@@ -14,7 +14,7 @@ export default function Todo({ title, details, id, setTodos, status, todos }) {
 			<h5>{title}</h5>
 			<p>{details}</p>
 			{status === "pending" ? (
-				<div className="status btn btn-light">Pending</div>
+				<div className="status btn btn-secondary">Pending</div>
 			) : status === "complete" ? (
 				<div className="status btn btn-success">✓ Completed</div>
 			) : null}
